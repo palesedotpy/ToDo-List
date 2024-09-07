@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/task-container.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>ToDo List</h1>
+                <div class="navbar">
+                    <div class="account">
+                        <div class="account-buttons">
+                            <button class="button">
+                                <span>Log-in</span>
+                                <img src="img/login-icon.svg" alt="">
+                            </button>
+
+                            <button class="button">
+                                <span>Sign-up</span>
+                                <img src="img/logout-icon.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="tasksContainer">
+                <div class="task">
+                    <input type="checkbox" class="taskCheck" id="completeTaks">
+                    <label for="completeTaks" class="taskLabel">Uccidere</label>
+                </div>
+                <div class="task">
+                    <input type="checkbox" class="taskCheck" id="completeTaks">
+                    <label for="completeTaks" class="taskLabel">Uccidere</label>
+                </div>
+                <div class="task">
+                    <input type="checkbox" class="taskCheck" id="completeTaks">
+                    <label for="completeTaks" class="taskLabel">Uccidere</label>
+                </div>
+                <div class="task">
+                    <input type="checkbox" class="taskCheck" id="completeTaks">
+                    <label for="completeTaks" class="taskLabel">Uccidere</label>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+
+    <script>
+        console.log(localStorage.getItem("name"));
+    </script>
+</html>

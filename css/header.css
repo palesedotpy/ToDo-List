@@ -1,0 +1,35 @@
+.header {
+    margin: 5px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .account-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.header .account-buttons > .button{
+
+    background-color: var(--turquoise);
+
+    padding: 4px 10px;
+
+    border: none;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
+    transition: .4s;
+}
+
+.header .account-buttons .button:hover{
+
+    cursor: pointer;
+
+    background-color: var(--dark-turquoise);
+}
+
