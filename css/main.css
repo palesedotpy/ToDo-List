@@ -3,9 +3,14 @@
 
 :root {
     --white: #F5F5F5;
-    --turquoise: #48CFCB;
-    --dark-turquoise: #229799;
+    --teal: #48CFCB;
+    --dark-teal: #229799;
     --gray: #424242;
+    --red: #EE4E4E;
+    --yellow: #FAEF9B;
+    --dark-yellow: #F6D776;
+
+    --br: 4px;
 }
 
 * {
@@ -22,7 +27,28 @@ body {
 }
 
 .container {
-    width: clamp(400px, 50%, 1500px);
+    width: clamp(350px, 50%, 1500px);
     margin: 50px auto;
 }
 
+.button {
+    
+    background-color: var(--teal);
+    padding: var(--br) 10px;
+
+    border: 1px solid transparent;
+    border-radius: var(--br);
+
+    display: flex;
+    align-items: center;
+    
+    transition: background-color .4s;
+
+}
+.button:hover{
+
+    cursor: pointer;
+
+    border-color: var(--dark-teal);
+    background-color: transparent;
+}

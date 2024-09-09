@@ -1,8 +1,101 @@
 
-.tasksContainer {
+.main {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
+.tasksContainer {
+    width: auto;
+    height: 600px;
+
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media screen and (max-height: 700px){
+
+    .tasksContainer {
+        max-height: 500px;
+    }
+    
+}
+
+.tasks {
+    max-height: 600px;
+    overflow-x: auto;
+    overflow-x: hidden;
+
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .task {
-    background-color: var();
+    border: 1px solid transparent;
+    border-radius: var(--br);
+    padding: 11px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task:hover {
+    border-color: var(--gray);
+}
+.task:hover .taskButtons{
+    visibility:visible;
+}
+
+.textTask {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.textTask .taskCheck {
+    margin-top: 4px;
+}
+
+.taskButtons {
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.removeTaskButton {
+    background-color: var(--teal);
+}
+.removeTaskButton:hover {
+    background-color: transparent;
+    border-color: var(--teal);
+}
+
+.favoriteTaskButton {
+    border: 1px solid var(--gray);
+    background-color: transparent;
+}
+.favoriteTaskButton:hover {
+    background-color: transparent;
+    border-color: var(--red);
+}
+.favoriteTaskButton:focus {
+    background-color: var(--red);
+}
+
+.removeTaskButton > img, .favoriteTaskButton > img{
+    width: 1.2em;
+}
+
+.footerTaskButtons {
+    background-color: transparent;
+    border-color: var(--teal);
+}
+.footerTaskButtons:hover {
+    background-color: var(--teal);
+    border-color: transparent;
 }

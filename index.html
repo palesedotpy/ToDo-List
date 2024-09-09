@@ -11,11 +11,16 @@
     <body>
         <div class="container">
             <header class="header">
-                <h1>ToDo List</h1>
+                <div class="logo">
+                    <!-- Fai in modo che la checkbox sia responsive -->
+                    <img src="img/logo-icon.svg" alt="">
+                    <h1>ToDoList</h1>
+                </div>
                 <div class="navbar">
                     <div class="account">
-                        <div class="account-buttons">
-                            <button class="button">
+                        <img src="img/menu-icon.svg" class="menuIcon" id="menu-icon">
+                        <div class="accountButtons" id="account-buttons">
+                            <button class="button accountButton">
                                 <span>Log-in</span>
                                 <img src="img/login-icon.svg" alt="">
                             </button>
@@ -29,29 +34,132 @@
                 </div>
             </header>
 
-            <div class="tasksContainer">
-                <div class="task">
-                    <input type="checkbox" class="taskCheck" id="completeTaks">
-                    <label for="completeTaks" class="taskLabel">Uccidere</label>
-                </div>
-                <div class="task">
-                    <input type="checkbox" class="taskCheck" id="completeTaks">
-                    <label for="completeTaks" class="taskLabel">Uccidere</label>
-                </div>
-                <div class="task">
-                    <input type="checkbox" class="taskCheck" id="completeTaks">
-                    <label for="completeTaks" class="taskLabel">Uccidere</label>
-                </div>
-                <div class="task">
-                    <input type="checkbox" class="taskCheck" id="completeTaks">
-                    <label for="completeTaks" class="taskLabel">Uccidere</label>
+            <div class="main">
+                <div class="tasksContainer" id="tasks-container">
+                    <div class="tasks">
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis?</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="textTask">
+                                <input type="checkbox" class="taskCheck" id="completeTaks">
+                                <label for="completeTaks" class="taskLabel">Lorem ipsum dolor sit amet.</label>
+                            </div>
+                            <div class="taskButtons">
+                                <button class="button favoriteTaskButton"><img src="img/favorite-icon.svg"></button>
+                                <button class="button removeTaskButton"><img src="img/remove-icon.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="taskFooter">
+                        <button class="button footerTaskButtons">Add task<img src="img/plus-icon.svg"></button>
+                        <button class="button footerTaskButtons">Remove all<img src="img/delete-icon.svg"></button>
+                    </div>
                 </div>
             </div>
             
         </div>
     </body>
 
-    <script>
-        console.log(localStorage.getItem("name"));
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
 </html>
