@@ -1,0 +1,13 @@
+
+.account .accountButtons{
+
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.account .accountButtons .accountButton {
+    font-size: 1.5em;
+}

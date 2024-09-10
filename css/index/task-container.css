@@ -91,11 +91,3 @@
     width: 1.2em;
 }
 
-.footerTaskButtons {
-    background-color: transparent;
-    border-color: var(--teal);
-}
-.footerTaskButtons:hover {
-    background-color: var(--teal);
-    border-color: transparent;
-}

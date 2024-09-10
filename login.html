@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/login/content..css">
+        <link rel="stylesheet" href="css/login/account.css">
+        <link rel="stylesheet" href="css/login/popUp.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+
+            <header class="header">
+                <div class="logo">
+                    <img src="img/logo-icon.svg">
+                    <h1 class="title">ToDoList</h1>
+                </div>
+            </header>
+
+            <div class="description">
+                <p>
+                    <strong>Welcome to <em>ToDo List</em></strong> — <em>your personal task manager</em> to help you stay on top of everything! <br> <br>
+                    Whether you have a <strong>busy day</strong> ahead or just need to <strong>jot down</strong> a few reminders, <strong>ToDo List is here to keep you organized.</strong> <br>
+                    <ul>
+                        <li>Easily <strong>add tasks</strong></li>
+                        <li><strong>Check them off</strong> as you go</li>
+                        <li>And even <strong>edit or delete</strong> them whenever you need</li>
+                    </ul> <br>
+                    You can also prioritize your tasks and <strong>set deadlines</strong> to keep everything on track. <br> <br>
+                    It's <strong>simple</strong>, <strong>straightforward</strong>, and <strong>designed just for you</strong>—<strong>because getting things done should feel effortless!</strong> <br>
+                </p>
+            </div>
+
+            <div class="account">
+                <div class="accountButtons" id="account-buttons">
+                    <button class="button accountButton" name="login" id="login-button" onclick="openPopUp('pop-up-login')">
+                        <span>Log-in</span>
+                        <img src="img/login-icon.svg" alt="">
+                    </button>
+
+                    <button class="button accountButton" name="signup" id="signup-button" onclick="openPopUp('pop-up-signup')">
+                        <span>Sign-up</span>
+                        <img src="img/logout-icon.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Login Pop Up -->
+        <div class="pop-up-account" id="pop-up-login">
+            <div class="account-header">
+                <h3 class="title">Login</h3>
+                <button class="button" onclick="closePopUp()"><img src="img/remove-icon.svg"></button>
+            </div>
+            <form action="php/login.php" class="input-credentials">                    
+                <div class="input-group">
+                    <input type="text" class="input" id="loginInputEmail" required>
+                    <label class="placeholder" for="loginInputEmail">Email</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" class="input" id="loginInputPassword" required>
+                    <label class="placeholder" for="loginInputPassword">Password</label>
+                </div>
+            </form>                    
+            <div class="save-account">
+                <p class="warning-banner" id="warning-banner"></p>
+                <input type="submit" class="button signupButton" value="Login" onclick="">
+            </div>
+        </div>
+
+        <!-- Signup Pop Up -->
+        <div class="pop-up-account" id="pop-up-signup">
+            <div class="account-header">
+                <h3 class="title">Sign up</h3>
+                <button class="button" onclick="closePopUp()"><img src="img/remove-icon.svg" ></button>
+            </div>
+            <form class="input-credentials" action="php/signup.php" name="">
+                <div class="input-group">
+                    <input type="text" class="input" id="signupInputName" required>
+                    <label class="placeholder" for="signupInputName">Name</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" class="input" id="signupInputEmail" required>
+                    <label class="placeholder" for="signupInputEmail">Email</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" class="input" id="signupInputPassword" required>
+                    <label class="placeholder" for="signupInputPassword">Password</label>
+                </div>
+            </form>                    
+            <div class="save-account">
+                <p class="warning-banner" id="warning-banner"></p>
+                <input type="submit" class="button signupButton" value="Signup" onclick="">
+            </div>
+        </div>
+  
+
+        <script src="js/main.js"></script>
+        <script src="js/login/pop-up.js"></script>
+    </body>
+</html>

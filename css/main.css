@@ -10,6 +10,9 @@
     --yellow: #FAEF9B;
     --dark-yellow: #F6D776;
 
+    --teal-selection: #48cfcb65;
+    --shadow: rgba(34, 151, 153, 0.4) 5px 5px, rgba(34, 151, 153, 0.3) 10px 10px, rgba(34, 151, 153, 0.2) 15px 15px, rgba(34, 151, 153, 0.1) 20px 20px, rgba(34, 151, 153, 0.05) 25px 25px;
+
     --br: 4px;
 }
 
@@ -46,9 +49,57 @@ body {
 
 }
 .button:hover{
-
     cursor: pointer;
 
     border-color: var(--dark-teal);
     background-color: transparent;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+.input {
+    font-size: .9em;
+
+    padding: 15px;
+    width: 100%;
+
+    background-color: transparent;
+    border: 1px solid var(--gray);
+
+    border-radius: 8px;
+}
+.placeholder {
+    font-size: 14px;
+    padding: 0 10px ;
+
+    top: 18px;
+    left: 10px;
+
+    user-select: none;
+
+    transition: .3s;
+    position: absolute;
+}
+.input:valid,
+.input:focus {
+    border-color: var(--teal);
+}
+
+.input:valid + .placeholder,
+.input:focus + .placeholder {
+    color: var(--dark-teal);
+
+    top: -8px;
+    background-color: var(--white); 
+
+    border-color: var(--teal);
+}
+
+:focus {
+    outline: none;
+}
+::selection {
+    background-color: var(--teal-selection);
 }

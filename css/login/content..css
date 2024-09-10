@@ -1,0 +1,33 @@
+.header {
+    margin: 5px 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .logo .title{
+    font-size: 2.5rem;
+}
+
+.container {
+    height: 80vh;
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.description {
+    font-size: 1.2em;
+    width: 100%;
+}
+.description ul {
+    padding: 10px 15px;
+}

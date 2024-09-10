@@ -1,0 +1,48 @@
+.pop-up-account {
+    padding: 30px;
+    width: clamp(350px, 30vw, 600px);
+
+    font-size: 1.3em;
+    background-color: var(--white);
+    border-radius: 4px;
+
+    box-shadow: var(--shadow); 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    
+    top: 50% ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    border: 1px solid;
+}
+
+
+.pop-up-account .input-credentials{
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.account-header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.account-header .title{
+    font-size: 1.6em;
+}
+.save-account {
+    display: flex;
+    justify-content: center;
+}
+.save-account .signupButton {
+    font-size: 1em;
+}  
