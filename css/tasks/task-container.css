@@ -91,3 +91,8 @@
     width: 1.2em;
 }
 
+.taskFooter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

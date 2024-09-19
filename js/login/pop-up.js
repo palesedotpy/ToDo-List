@@ -7,6 +7,10 @@ const button = document.getElementsByClassName("accountButton");
 
 let popUp; 
 
+document.addEventListener("load", () => {
+    if ()
+});
+
 function openPopUp(popUpId) {
     popUp = document.getElementById(popUpId);
 
@@ -20,3 +24,7 @@ function closePopUp() {
     document.body.style.backgroundColor = "#F5F5F5";
     container.style.opacity = "1";
 }
+
+// document.getElementById("signup-form").addEventListener("submit", function(event) {
+//     event.preventDefault();
+// });

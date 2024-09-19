@@ -1,5 +1,5 @@
-
-.account .accountButtons{
+.accountSection .accountButtons{
+    text-decoration: none;
 
     margin-top: 50px;
 
@@ -8,6 +8,6 @@
     gap: 50px;
 }
 
-.account .accountButtons .accountButton {
+.accountSection .accountButtons .accountButton {
     font-size: 1.5em;
 }

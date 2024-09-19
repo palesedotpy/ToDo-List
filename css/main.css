@@ -6,7 +6,7 @@
     --teal: #48CFCB;
     --dark-teal: #229799;
     --gray: #424242;
-    --red: #EE4E4E;
+    --red: #EE4E4E; 
     --yellow: #FAEF9B;
     --dark-yellow: #F6D776;
 
@@ -24,7 +24,6 @@
     color: var(--gray);
 }
 
-
 body {
     background-color: var(--white);
 }
@@ -33,6 +32,30 @@ body {
     width: clamp(350px, 50%, 1500px);
     margin: 50px auto;
 }
+.centerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+}
+
+/* Header section */
+.header {
+    margin: 5px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header .logo img{
+    width: 30px;
+}
+
 
 .button {
     
@@ -102,4 +125,11 @@ body {
 }
 ::selection {
     background-color: var(--teal-selection);
+}
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }

@@ -1,0 +1,27 @@
+.pop-up {
+    padding: 30px;
+    width: clamp(350px, 30vw, 600px);
+
+    font-size: 1.3em;
+    border-radius: 4px;
+    background-color: var(--teal);
+
+    box-shadow: var(--shadow); 
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    top: 50% ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    z-index: 11111;
+}
+
+
+
+.title{
+    color: var(--red);
+    font-size: 1.6em;
+}

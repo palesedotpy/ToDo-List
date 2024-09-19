@@ -15,13 +15,9 @@
     font-size: 2.5rem;
 }
 
-.container {
+.containerDimension {
     height: 80vh;
-    max-height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;    
+    max-height: 100%; 
 }
 
 .description {
@@ -30,4 +26,8 @@
 }
 .description ul {
     padding: 10px 15px;
+}
+
+.accountSection .button {
+    text-decoration: none;
 }

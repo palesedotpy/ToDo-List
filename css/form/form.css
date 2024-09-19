@@ -1,0 +1,58 @@
+
+body {
+
+     /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(to right , var(--dark-teal), var(--teal));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to right , var(--dark-teal), var(--teal));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to right , var(--dark-teal), var(--teal));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right , var(--dark-teal), var(--teal));
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container {
+    background-color: var(--white);
+
+    padding: 20px clamp(50px, 6vw, 100px);
+    border-radius: 8px;
+}
+.containerDimension {
+    height: 60vh;
+}
+
+.form .input-credentials{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+@media screen and (min-width: 1000px){
+    .form .input-credentials{
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+        row-gap: 50px;
+    }
+}
+
+.errorColor{
+    color: var(--red);
+}
+
+.save-account {
+
+    margin-top: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.save-account .submitButton {
+    font-size: 20px;
+}
