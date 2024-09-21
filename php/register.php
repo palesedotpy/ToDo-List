@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,12 +39,20 @@
                     else {
                         $name = validate($name);
                         $email = validate($email);
-                        $password = validate($password);
-                        $connection -> query("INSERT INTO users (name, email, password, tasks_id) VALUES ('{$name}', '{$email}', '$password', 0);");
+                        $password = validate($password); 
+                        $password = password_hash($password, PASSWORD_DEFAULT);
+
+                        $_SESSION["name"] = $name;
+                        $_SESSION["email"] = $email;
+                        $_SESSION["password"] = $password;
+
+                        
+
+                        $connection -> query("INSERT INTO users (name, email, password) 
+                                VALUES ('{$name}', '{$email}', '$password');");
+                        $connection -> close();
                         header('Location: todoList.php');
                     }
-
-                    $connection -> close();
                 }
             ?>
 

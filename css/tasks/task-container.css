@@ -8,17 +8,17 @@
 
 .tasksContainer {
     width: auto;
-    height: 600px;
+    height: 700px;
 
     gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-@media screen and (max-height: 700px){
+@media screen and (max-height: 845px){
 
     .tasksContainer {
-        max-height: 500px;
+        max-height: 600px;
     }
     
 }
@@ -28,7 +28,6 @@
     overflow-x: auto;
     overflow-x: hidden;
 
-    gap: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -54,7 +53,22 @@
     align-items: start;
     gap: 10px;
 }
+.textTask .taskLabel {
 
+    width: 30ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+@media screen and (min-width: 700px) {
+    .textTask .taskLabel {
+        width: 70ch;
+    }
+}
 .textTask .taskCheck {
     margin-top: 4px;
 }
@@ -94,5 +108,39 @@
 .taskFooter {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
     gap: 20px;
+}
+.taskFooter .taskInputContainer {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.input-group {
+    width: 80%;
+}
+.taskFooter .taskInputContainer .categorySelection{
+
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+
+    width: 80px;        
+
+    
+    text-align: center;
+
+    transition: .4s;
+}
+@media screen and (min-width: 800px) {
+    .taskFooter .taskInputContainer {
+        flex-direction: row;
+    }
+    .taskFooter .taskInputContainer .categorySelection{
+        width: 15%;     
+    }
 }

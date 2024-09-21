@@ -1,16 +1,11 @@
 <?php
-
-    $db_server = "localhost";
-    $db_user = "root";
-    $db_password = "";
-    $db_name = "todolistusers";
-
     function create_connection () {
         $conn = new mysqli(
-            $GLOBALS['db_server'],
-            $GLOBALS['db_user'],
-            $GLOBALS['db_password'],
-            $GLOBALS['db_name']
+            "localhost",
+            "root",
+            "",
+            "todolistusers"
+            
         );
 
         if (mysqli_connect_errno()) {
