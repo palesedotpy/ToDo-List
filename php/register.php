@@ -7,13 +7,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Register</title>
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/form/form.css">
-        <link rel="stylesheet" href="../css/form/popUp.css">
     </head>
     <body>
-        <div class="container centerContainer containerDimension containerPosition">
+        <div class="container centerContainer containerDimension">
 
             <?php
                 include "database.php";
@@ -60,14 +59,11 @@
                 <h1>Register</h1>
             </div>
 
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> " method="post" class="form" id="signup-form">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> "method="post" class="form" id="signup-form">
                 <div class="input-credentials">
-
-                    <div>
-                        <div class="input-group">
-                            <input type="text" class="input <?php echo $nameError; ?>" id="signupInputName" name="signupInputName" required>
-                            <label class="placeholder" for="signupInputName">Name</label>
-                        </div>
+                    <div class="input-group">
+                        <input type="text" class="input <?php echo $nameError; ?>" id="signupInputName" name="signupInputName" required>
+                        <label class="placeholder" for="signupInputName">Name</label>
                     </div>
                     
                     <div class="input-group">

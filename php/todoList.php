@@ -7,15 +7,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>ToDoList</title>
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/tasks/task-container.css">
         <link rel="stylesheet" href="../css/tasks/popUp.css">
     </head>
     <body>
-
-        <?php 
-
+        <?php
             include "database.php";
 
             $connection = create_connection();
@@ -26,7 +24,6 @@
             if ($connection -> affected_rows >= 1) {
                 $tasksAvaible = true;
             }
-        
         ?>
 
         <div class="container">
@@ -37,8 +34,8 @@
                     <h1>ToDoList</h1>
                 </div>
                 <div class="navbar">
-                    <form class="filters" action="" method="get">
-                        <button class="button"><img src="../img/filters-icon.svg">Filters</button>
+                    <form class="filters" action="settings/management.php" method="get">
+                        <button class="button"><img src="../img/filters-icon.svg">Settings</button>
                     </form>
                 </div>
             </header>

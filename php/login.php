@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,6 +37,7 @@
                         if (password_verify($password, $account['password'])) {
                             $_SESSION["email"] = $email;
                             $_SESSION["password"] = $password;
+
                             header('Location: todoList.php');
                         }
                         else {
