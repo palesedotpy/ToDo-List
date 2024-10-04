@@ -22,15 +22,17 @@
                     <div class="input-group">
                         <input type="text" class="input" id="email-field" name="email" value="<?php echo $email; ?>" required>
                         <label class="placeholder" for="email-field">Email</label>
-                    </div>
-                    
+                    </div>                    
                 </div>
                 
                 <div class="save-account">
                     <p class="errorColor"><?php echo $errorMex; ?></p>
-                    <form class="buttonsContainer" action="management.php" method="post">
-                        <input type="submit" class="button submitButton" name="submitSettings" value="Save">                    
-                        <button type="submit" class="button submitButton" name="logout">Logout <img src="../../img/logout-icon.svg"></button>
+                    <form action="management.php" method="post">
+                        <div class="buttonsContainer">
+                            <input type="submit" class="button submitButton" name="submitSettings" value="Save">                    
+                            <button type="submit" class="button submitButton" name="logout">Logout <img src="../../img/logout-icon.svg"></button>
+                            <button class="button submitButton" name="deleteAccount"><img src="../../img/remove-icon.svg">Delete account</button>
+                        </div>
                     </form>
                 </div>
             </form>

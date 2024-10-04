@@ -23,6 +23,9 @@
     
 }
 
+.filters {
+    width: fit-content;
+}
 .tasks {
     max-height: 600px;
     overflow-x: auto;
@@ -84,6 +87,9 @@
 .removeTaskButton {
     background-color: var(--teal);
 }
+.removeTaskButton:focus {
+    font-variant: var(--red);
+}
 .removeTaskButton:hover {
     background-color: transparent;
     border-color: var(--teal);
@@ -97,11 +103,8 @@
     background-color: transparent;
     border-color: var(--red);
 }
-.favoriteTaskButton:focus {
-    background-color: var(--red);
-}
 
-.removeTaskButton > img, .favoriteTaskButton > img{
+.button > img{
     width: 1.2em;
 }
 
@@ -116,8 +119,11 @@
 .taskFooter .taskInputContainer {
     width: 100%;
 
+    gap: 10px;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .input-group {
@@ -139,6 +145,7 @@
 @media screen and (min-width: 800px) {
     .taskFooter .taskInputContainer {
         flex-direction: row;
+        align-items: normal;
     }
     .taskFooter .taskInputContainer .categorySelection{
         width: 15%;     

@@ -7,13 +7,10 @@
 
     $connection = create_connection();
     
-    $connection -> query("INSERT INTO tasks (email, category, description) 
-        VALUES ('{$_SESSION['email']}', '{$_POST['taskCategory']}', '$task');");
-
+    $connection -> query("INSERT INTO tasks (user_id, category, description, favorite) 
+        VALUES ('{$_SESSION['user_id']}', '{$_POST['taskCategory']}', '$task', 'no');");
 
     $connection -> close();
 
-
     header("Location: ../todoList.php");
-
 ?>

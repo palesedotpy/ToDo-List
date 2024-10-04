@@ -36,7 +36,14 @@
 
                         if (password_verify($password, $account['password'])) {
                             $_SESSION["email"] = $email;
-                            $_SESSION["password"] = $password;
+
+                            $res = $connection -> query("SELECT user_id, name FROM users WHERE email='{$_SESSION['email']}'");
+                            $row = $res -> fetch_array();
+                            $user_id = $row['user_id'];
+                            $name = $row['name'];
+
+                            $_SESSION['user_id'] = $user_id;
+                            $_SESSION["name"] = $name;
 
                             header('Location: todoList.php');
                         }
@@ -73,7 +80,7 @@
                 </div>
                 <div class="save-account">
                     <p class="errorColor"><?php echo $errorMex; ?></p>
-                    <input type="submit" class="button submitButton" name="submitSignup" value="Signup">
+                    <input type="submit" class="button submitButton" name="submitSignup" value="Login">
                 </div>
             </form>
         </div>

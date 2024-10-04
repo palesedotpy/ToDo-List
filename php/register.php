@@ -43,12 +43,17 @@
 
                         $_SESSION["name"] = $name;
                         $_SESSION["email"] = $email;
-                        $_SESSION["password"] = $password;
-
                         
 
                         $connection -> query("INSERT INTO users (name, email, password) 
                                 VALUES ('{$name}', '{$email}', '$password');");
+
+                        $res = $connection -> query("SELECT user_id FROM users WHERE email='{$_SESSION['email']}'");
+                        $row = $res -> fetch_array();
+                        $user_id = $row['user_id'];
+
+                        $_SESSION['user_id'] = $user_id;
+
                         $connection -> close();
                         header('Location: todoList.php');
                     }

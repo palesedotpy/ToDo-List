@@ -1,6 +1,7 @@
 
 <?php
     session_start();
+    include "../management/checkUserLog.php";
     include "../database.php";
 
     $name = "";
@@ -9,7 +10,7 @@
 
     /* Filling user inputs with his data */
     $connection = create_connection();
-    $result = $connection -> query("SELECT name, email FROM users WHERE email='{$_SESSION['email']}'");
+    $result = $connection -> query("SELECT name, email FROM users WHERE user_id='{$_SESSION['user_id']}'");
 
     $row = $result -> fetch_array();
     $name = $row['name'];
@@ -23,24 +24,26 @@
             $connection -> query(
                 "UPDATE users 
                 SET name='{$_POST['name']}', email='{$_POST['email']}'
-                WHERE email='{$_SESSION['email']}'
-                ");
-            // Update task email 
-            $connection -> query(
-                "UPDATE tasks 
-                SET email='{$_POST['email']}'
-                WHERE email='{$_SESSION['email']}'
+                WHERE user_id='{$_SESSION['user_id']}'
                 ");
             $name = $_POST['name'];
             $email = $_POST['email'];
             $_SESSION['name']  = $name;
             $_SESSION['email'] = $email;
 
-            // header("Location: ../todoList.php");
+            header("Location: ../todoList.php");
         }
         // If logout button is pressed
         else if (isset($_POST["logout"])) {
             session_destroy();
+            header("Location: ../../index.html");
+        }
+        else if(isset($_POST["deleteAccount"])) {
+            $connection -> query("DELETE FROM users WHERE user_id='{$_SESSION['user_id']}'");
+            $connection -> query("DELETE FROM tasks WHERE user_id='{$_SESSION['user_id']}'");
+
+            session_destroy();
+
             header("Location: ../../index.html");
         }
     }

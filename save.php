@@ -37,7 +37,7 @@
                 }
             ?>
 
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> " method="post" id="signup-form">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="signup-form">
                 <div class="input-credentials">
                     <div class="input-group">
                         <input type="text" class="input" id="signupInputName" name="signupInputName" required>
